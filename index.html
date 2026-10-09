@@ -104,10 +104,10 @@
   "use strict";
 
   // ============================================================
-  // 🔑 Supabase 配置
+  // 🔑 Supabase 配置（请替换为你自己的项目信息）
   // ============================================================
-  const SUPABASE_URL = 'https://iaaythwkfayrzrxibezb.supabase.co';
-  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlhYXl0aHdrZmF5cnpyeGliZXpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE1MDUyNzksImV4cCI6MjEwNzA4MTI3OX0.cLYo0lTFpoAsO8xCh3VxIyZkHvrz3nHMiHryYns81FQ';
+  const SUPABASE_URL = 'https://igsfqnnwuirvhhrczlsw.supabase.co';
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlnc2Zxbm53dWlydmhocmN6bHN3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk3ODA2MDUsImV4cCI6MjA5NTM1NjYwNX0.D1ic8LzNB2zhW21Bp0iscF-MBuztnG6LvICFbbtOXLE';
 
   (function(){
     // ========== 后端（直连 Supabase）==========
@@ -272,7 +272,7 @@
 
     // ========== 原有配置和视图代码 ==========
     const DEFAULT_CONFIG = {
-      settingPassword: "9090",
+      settingPassword: "9014",
       aiTalkUrl: "https://weixin.qq.com/",
       classInUrl: "https://www.classin.com/",
       discussionUrl: "https://discussion.example.com/",
@@ -598,7 +598,7 @@
       applyContainerBackground(config.gamePageBgUrl);
       const parts = config.gameParts || [];
       viewContainer.innerHTML = `<div style="width:100%; padding:8px;"><h2 style="font-family:'Comic Sans MS','Comic Neue',cursive;">🎮 Game Parts</h2><div class="part-grid">${parts.map(p=>`<div class="part-card" data-part-id="${p.id}"><i class="fas fa-puzzle-piece"></i><h3>${p.name}</h3></div>`).join('')}</div></div>`;
-      document.querySelectorAll('.part-card').forEach(c=> c.addEventListener('click', ()=> setView('partDetail', c.dataset.partId)));// Bohes Made
+      document.querySelectorAll('.part-card').forEach(c=> c.addEventListener('click', ()=> setView('partDetail', c.dataset.partId)));
     }
 
     function renderPartDetailView() {
